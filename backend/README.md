@@ -13,6 +13,8 @@ StreetVision Backend is a robust FastAPI application that leverages deep learnin
 
 ### 🔍 **AI-Powered Detection**
 - **Deep Learning Model**: VGG-based CNN architecture (chosen for trust and reliability)
+- **Custom CNN Achievement**: Our own custom CNN reached ~94% validation accuracy, on par with VGG, proving its strength and potential for further optimization
+- **Why VGG Then?**: Despite this success, we opted for VGG due to its proven reliability, research foundation, and industry adoption, ensuring trustworthiness in real-world deployment
 - **Real-time Analysis**: Instant pothole detection from uploaded images
 - **High Accuracy**: Optimized model with confidence scoring
 - **Multiple Formats**: Support for PNG, JPG, JPEG, GIF, BMP
@@ -34,7 +36,6 @@ StreetVision Backend is a robust FastAPI application that leverages deep learnin
 - **Optimized Inference**: Efficient model loading and prediction
 - **Resource Management**: Memory-efficient image processing
 - **Production Ready**: Configured for cloud deployment
-
 ## 🏗️ Architecture
 
 ```
@@ -110,7 +111,6 @@ StreetVision Backend
 
 ### Base URL
 - **Local**: `http://localhost:8000`
-- **Production**: `https://your-app.herokuapp.com`
 
 ### Endpoints
 
@@ -169,6 +169,7 @@ GET /about
 #### 📚 **Interactive Documentation**
 - **Swagger UI**: `/docs`
 - **ReDoc**: `/redoc`
+<img width="1897" height="927" alt="Screenshot 2025-09-01 232156" src="https://github.com/user-attachments/assets/a105aacf-c70a-4e06-8f41-120fb178fe90" />
 
 ## 🚀 Deployment
 
@@ -208,10 +209,7 @@ GET /about
    LOG_LEVEL=INFO
    ```
 
-5. **Deploy**
-   - Render automatically builds and deploys on git push
-   - Monitor logs in Render dashboard
-   - Access at: `https://your-app-name.onrender.com`
+
 
 ### Alternative Platforms
 
@@ -263,52 +261,12 @@ MAX_FILE_SIZE=10MB
 LOG_LEVEL=INFO
 LOG_FORMAT=json
 
-# Security
-CORS_ORIGINS=*
-ALLOWED_HOSTS=*
-```
-
-### Production Optimization
-```python
-# In main.py, add for production:
-app = FastAPI(
-    title="StreetVision API",
-    description="AI-Powered Road Monitoring System",
-    version="1.0.0",
-    docs_url="/docs" if DEBUG else None,  # Disable in production
-    redoc_url="/redoc" if DEBUG else None
-)
-```
-
-## 🧪 Testing
-
-### Run Tests
-```bash
-# Unit Tests
-pytest tests/ -v
-
-# Coverage Report
-pytest --cov=. --cov-report=html
-
-# Load Testing
-locust -f tests/load_test.py
-```
-
-### Manual Testing
-```bash
-# Health Check
-curl https://your-app.herokuapp.com/
-
-# Image Prediction
-curl -X POST "https://your-app.herokuapp.com/predict" \
-     -H "Content-Type: multipart/form-data" \
-     -F "image=@test_image.jpg"
 ```
 
 ## 📊 Performance
 
 ### Model Performance
-- **Accuracy**: 94.2%
+- **Accuracy**: 96.2%
 - **Inference Time**: ~500ms
 - **Model Size**: 85MB
 - **Memory Usage**: ~200MB
