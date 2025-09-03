@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: streetvision-backend
+    runtime: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r requirements.txt && playwright install
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.18
+      - key: TF_CPP_MIN_LOG_LEVEL
+        value: 2
+      - key: MODEL_PATH
+        value: ../deployment_models/pothole_detector_vgg_20250803_124150.keras
+      - key: UPLOAD_DIR
+        value: uploads
+      - key: LOG_LEVEL
+        value: INFO
+    disk:
+      name: streetvision-storage
+      mountPath: /opt/render/project/src/uploads
+      sizeGB: 1
