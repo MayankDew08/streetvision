@@ -1,0 +1,75 @@
+# ===== CORE FASTAPI FRAMEWORK =====
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+starlette==0.27.0
+
+# ===== DATA VALIDATION & SERIALIZATION =====
+pydantic==2.5.0
+typing-extensions==4.8.0
+
+# ===== HTTP & FILE HANDLING =====
+python-multipart==0.0.6
+httpx==0.25.2
+
+# ===== MACHINE LEARNING & IMAGE PROCESSING =====
+tensorflow==2.10.0
+tensorflow-cpu==2.10.0
+numpy==1.21.6
+Pillow==10.1.0
+
+# ===== WEB AUTOMATION (PLAYWRIGHT) =====
+playwright==1.40.0
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# ===== HTTP REQUESTS =====
+requests==2.31.0
+
+# ===== SYSTEM & FILE OPERATIONS =====
+uuid
+os-sys
+pathlib2==2.3.7
+
+# ===== ASYNC SUPPORT =====
+asyncio
+aiofiles==23.2.1
+
+# ===== ENVIRONMENT & CONFIGURATION =====
+python-dotenv==1.0.0
+
+# ===== LOGGING & MONITORING =====
+python-json-logger==2.0.7
+loguru==0.7.2
+
+# ===== SECURITY & VALIDATION =====
+email-validator==2.1.0
+passlib[bcrypt]==1.7.4
+
+# ===== DEVELOPMENT & TESTING =====
+pytest-cov==4.1.0
+black==23.11.0
+isort==5.12.0
+
+# ===== CORS & MIDDLEWARE =====
+# (Included in FastAPI)
+
+# ===== SUBPROCESS & SYSTEM CALLS =====
+# (Built-in Python modules)
+
+# ===== UUID GENERATION =====
+# (Built-in Python module)
+
+# ===== PDF HANDLING (If needed later) =====
+reportlab==4.0.7
+PyPDF2==3.0.1
+
+# ===== JSON PROCESSING =====
+# (Built-in Python module)
+
+# ===== GEOCODING & LOCATION SERVICES =====
+geopy==2.4.0
+nominatim==0.1
+
+# ===== ADDITIONAL UTILITIES =====
+python-slugify==8.0.1
+python-dateutil==2.8.2
