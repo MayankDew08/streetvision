@@ -1,6 +1,0 @@
-__pycache__/
-.ipynb_checkpoints/
-*.DS_Store
-pothole_dataset/
-pothole_dataset_split/
-Notebooks/
